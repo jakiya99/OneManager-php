@@ -247,15 +247,6 @@
         .more-disk div li a:hover{color:rgba(0,0,0,.87);}
         .more-disk div li a[now]{color:rgba(0,0,0,1);}
     </style>
-	<style>
-body {
-  background-image: url('https://i.ibb.co/yPXpnXZ/photo-2021-04-16-11-24-53.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-</style>
-	
 </head>
 <body>
     <header>
@@ -263,14 +254,14 @@ body {
             <div class="title pull-left">
                 <a href="<!--base_path-->"><!--Sitename--></a>
             </div>
-            <div class="pull-right">
+            <div class="pull-right"><!--
 <!--LoginStart-->
                 <a class="pull-left" onclick="/*login();*/"><!--constStr@Login--></a>
 <!--LoginEnd-->
 <!--AdminStart-->
                 <a class="pull-left" onclick="logout();"><!--constStr@Logout--></a>
 <!--AdminEnd-->
-                &nbsp;| 
+                &nbsp;| -->
                 <div class="pull-right lang">
                     <select name="language" id="language" class="language" onchange="changelanguage(this.options[this.options.selectedIndex].value)">
                         <option value="">Language</option>
@@ -307,20 +298,11 @@ body {
 <!--DiskPathArrayEnd-->
                     </h1>
                 </div>
-<!--IsFileStart-->
-                <div class="main-item-list">
-                    <div class="main-items main-item-title">
-                        <div class="inner-container">
-                            <div>
-                            <div style="margin: 24px">
-                                <textarea id="url" title="url" rows="1" style="width: 100%; margin-top: 2px;" readonly><!--FileEncodeUrl--></textarea>
-                                <a href="<!--FileUrl-->"><ion-icon name="download" style="line-height: 16px;vertical-align: middle;"></ion-icon>&nbsp;<!--constStr@Download--></a>
-                            </div>
-                            </div>
-                            <div>
+    <!--IsFileStart-->
+               
                                 <!--IsimgFileStart-->
                                 <img src="<!--FileDownUrl-->" alt="<!--FileName-->" onload="if (this.offsetWidth>document.getElementById('url').offsetWidth) this.style.width='100%';" />
-                                <!--IsimgFileEnd-->
+                                <!--IsimgFileEnd-->                           
                                 <!--IsvideoFileStart-->
                                 <div id="video-a0"></div>
                                 <!--IsvideoFileEnd-->
