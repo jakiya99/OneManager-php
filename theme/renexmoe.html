@@ -32,6 +32,43 @@
   .mdui-shadow-3 {
     background: rgba(255, 255, 255, 0.5);
   }
+  
+  
+  
+  .mdui-video-fluid {
+            height: -webkit-fill-available;
+		}
+		.dplayer-video-wrap .dplayer-video {
+			height: -webkit-fill-available !important;
+		}
+		.gslide iframe, .gslide video {
+            height: -webkit-fill-available;
+		}
+		@media screen and (max-width:950px)	{		
+			.mdui-list-item .mdui-text-right{
+				display: none;
+			}
+			.mdui-container{
+				width:100% !important;
+				margin:0px;
+			}
+			.mdui-toolbar>*{				
+				display: none;
+			}
+			.mdui-toolbar>a:last-child,.mdui-toolbar>a:nth-last-of-type(2),.mdui-toolbar>.mdui-typo-headline,.mdui-toolbar>i:first-child,.mdui-toolbar-spacer{
+				display: block;
+			}
+		}
+		.spec-col{padding:.9em;display:flex;align-items:center;white-space:nowrap;flex:1 50%;min-width:225px}
+		.spec-type{font-size:1.35em}
+		.spec-value{font-size:1.25em}
+		.spec-text{float:left}
+		.device-section{padding-top:30px}
+		.spec-device-img{height:auto;height:340px;padding-bottom:30px}
+		#dl-header{margin:0}
+		#dl-section{padding-top:10px}
+		#dl-latest{position:relative;top:50%;transform:translateY(-50%)}
+  
 </style>
 <script>
   window.disableddarkmode = false;
@@ -465,17 +502,22 @@
 <!--IsmusicFileEnd-->
 
   <!--IsvideoFileStart-->
-<video
-  class="mdui-video-fluid"
-  controls
-  style="margin-top: 20px; margin-bottom: 20px"
->
-  <source src="<!--FileDownUrl-->" />
-  <p>
-    Your browser doesn't support HTML5 video. Here is a
-    <a href="<!--FileDownUrl-->">link to the video</a> instead.
-  </p>
-</video>
+<link class="dplayer-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js"></script>
+<div class="nexmoe-item">
+	<p>❗️If video dosen't play refresh the tab 🔄</p>
+    <div class="mdui-center" id="dplayer"></div>
+</div>
+<script>
+    const dp = new DPlayer({
+        container: document.getElementById('dplayer'),
+        lang:'zh-en',
+        video: {
+            url: '<!--FileDownUrl-->',
+            type: 'auto'
+        }
+    });
+</script>
 <!--IsvideoFileEnd-->
  <!--IsofficeFileStart-->
 <iframe
