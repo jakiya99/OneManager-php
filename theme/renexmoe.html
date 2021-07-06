@@ -20,11 +20,6 @@
 <meta name="description" content=" E-Learning index by Mizsuki" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/186526/renexmoe-cdn@v1.3/css/app.css"><meta name="theme-color" content="#fff" />
 <!--BackgroundStart-->
-
-     <script src="https://cdn.plyr.io/3.6.8/demo.js"crossorigin="anonymous" ></script>
-     <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
-
-     
 <style>
   body {
     --bg: url("<!--BackgroundUrl-->");
@@ -479,15 +474,22 @@ window.player = player;
 <!--IsmusicFileEnd-->
 
   <!--IsvideoFileStart-->
-    
-    
-	<p>❗️refresh the tab 🔄</p>
-	<video controls autoplay crossorigin playsinline poster="https://i.ibb.co/nM2778x/78268591-stem-education-background-science-technology-engineering-mathematics.jpg" id="player">
-		 <source src="<!--FileDownUrl-->" type="video/mp4" size="576">
-    <!-- Fallback for browsers that don't support the <video> element -->
-			<a href="<!--FileDownUrl-->" download>Download</a>
-	</video>
+<link class="dplayer-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js"></script>
+<div class="nexmoe-item">
+	<p>❗️If video doesn't play😐 refresh the tab 🔄</p>
+    <div class="mdui-center" id="dplayer"></div>
 </div>
+<script>
+    const dp = new DPlayer({
+        container: document.getElementById('dplayer'),
+        lang:'zh-en',
+        video: {
+            url: '<!--FileDownUrl-->',
+            type: 'auto'
+        }
+    });
+</script>
 <!--IsvideoFileEnd-->
  <!--IsofficeFileStart-->
 <iframe
@@ -558,10 +560,6 @@ window.player = player;
   "pdf":"picture_as_pdf", "default":"insert_drive_file"}
   <!--IconValuesEnd-->
   <script src="https://cdn.jsdelivr.net/gh/186526/renexmoe-cdn@v1.3/js/app@1b381f3c.a4f2dc4618121eac37e2.js"></script><script src="https://cdn.jsdelivr.net/gh/186526/renexmoe-cdn@v1.3/js/app@28a13772.98a11cc0c1cf2495c3d8.js"></script><script src="https://cdn.jsdelivr.net/gh/186526/renexmoe-cdn@v1.3/js/app@34e3d95a.2f8dbf552095a86a7f1b.js"></script><script src="https://cdn.jsdelivr.net/gh/jakiya99/OneManager-php/rexx.js"></script><script src="https://cdn.jsdelivr.net/gh/186526/renexmoe-cdn@v1.3/js/app@9c50beac.30955a99f08c9574cd14.js"></script><script src="https://cdn.jsdelivr.net/gh/186526/renexmoe-cdn@v1.3/js/app@f0256996.956ea71aa357ba3fdc28.js"></script><script src="https://cdn.jsdelivr.net/gh/186526/renexmoe-cdn@v1.3/js/webpack-runtime.93708ab3e9cb84dcc01a.js"></script>
-  
-
-
-
 </html>
 
 
