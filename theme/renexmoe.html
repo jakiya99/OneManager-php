@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="<!--constStr@language-->">
+<html lang="zh-CN">
   <head>
-  
     <link rel="icon" type="image/png" href="https://image.flaticon.com/icons/png/512/3244/3244858.png"/>
     
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
@@ -20,16 +19,6 @@
 <title><!--Title--></title>
 <meta name="description" content=" E-Learning index by Mizsuki" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/186526/renexmoe-cdn@v1.3/css/app.css"><meta name="theme-color" content="#fff" />
-
-
-
- <link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/demo.css" /> 
- <script src="https://cdn.plyr.io/3.6.2/demo.js" crossorigin="anonymous" ></script>
- <script>
-const player = new Plyr('video', {captions: {active: true}});
-window.player = player;
-</script>
-
 <!--BackgroundStart-->
 <style>
   body {
@@ -43,18 +32,10 @@ window.player = player;
   .mdui-shadow-3 {
     background: rgba(255, 255, 255, 0.5);
   }
-  
-  
-.container {
-	margin: 50px auto;
-	max-width: 500px;
-}
-
 </style>
 <script>
   window.disableddarkmode = false;
 </script>
-
 <!--BackgroundEnd-->
 <!--BackgroundMStart-->
 
@@ -380,15 +361,6 @@ window.player = player;
 </li>
 <!--FolderListEnd-->
  <!--FileListStart-->
-
-
-
-
-
-
-
-
-
 <li
   class="mdui-list-item file mdui-ripple"
   data-sort
@@ -429,13 +401,9 @@ window.player = player;
   </div>
 </li>
 <!--FileListEnd-->
+
   </ul>
 </div>
-
-    
-    
-
-
 <!--ReadmemdStart-->
 <div class="mdui-chip mdui-ripple mdui-hidden-xs">
   <span class="mdui-chip-icon"
@@ -497,28 +465,22 @@ window.player = player;
 <!--IsmusicFileEnd-->
 
   <!--IsvideoFileStart-->
-
-<video controls crossorigin playsinline poster="https://i.ibb.co/3kBxFtQ/Wallpaper-16.jpg" id="player">
-
-<source src="<!--FileDownUrl-->" 
-type="video/mp4" s
-ize="576" 
-/>
-
-<track kind="captions" label="English captions" src="/path/to/captions.vtt" srclang="en" default />
-	</video>
+<link class="dplayer-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js"></script>
+<div class="nexmoe-item">
+	<p>❗️If video doesn't play😐 refresh the tab 🔄</p>
+    <div class="mdui-center" id="dplayer"></div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
+<script>
+    const dp = new DPlayer({
+        container: document.getElementById('dplayer'),
+        lang:'zh-en',
+        video: {
+            url: '<!--FileDownUrl-->',
+            type: 'auto'
+        }
+    });
+</script>
 <!--IsvideoFileEnd-->
  <!--IsofficeFileStart-->
 <iframe
