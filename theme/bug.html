@@ -509,16 +509,15 @@ window.player = player;
 	
 	
 	
+
+	
+	
 	
 	
 	
 	
   <!--IsvideoFileStart-->
-	<script>
-		var newContent = document.querySelector(".new-content");
-
-pjax.refresh(newContent);
-	</script>
+	
 <link class="dplayer-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js"></script>
 <div class="nexmoe-item">
@@ -537,7 +536,13 @@ pjax.refresh(newContent);
 </script>
 	
 	
-	
+	<script>
+document.getElementById('dplayer').play();
+// or if you change the src and want to load the new video
+document.getElementById('dplayer').load();
+// or using jQuery
+$("#dplayer")[0].play();
+</script>
 	
 	
 	
