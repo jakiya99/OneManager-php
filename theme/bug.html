@@ -532,9 +532,9 @@ window.player = player;
             url: '<!--FileDownUrl-->',
             type: 'auto'
         }
-	    document.getElementById('dplayer').load();
+	    
     });
-	
+	$.pjax.reload({ container: '#dplayer' });
 </script>
 	
 	
