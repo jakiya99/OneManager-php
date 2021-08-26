@@ -436,23 +436,7 @@ window.player = player;
 <!--IsvideoFileEnd-->
 <!--IsFileEnd-->
 <!--ListEnd-->
-<!--AdminStart-->
-        function logout() {
-            document.cookie = "admin=; path=/";
-            location.href = location.href;
-        }
-<!--AdminEnd-->
-<!--LoginStart-->
-        function login() {
-            document.getElementById('mask').style.display='';
-                //document.getElementById('mask').style.width=document.documentElement.scrollWidth+'px';
-            document.getElementById('mask').style.height=document.documentElement.scrollHeight<window.innerHeight?window.innerHeight:document.documentElement.scrollHeight+'px';
-            document.getElementById('login_div').style.display='';
-            document.getElementById('login_div').style.left=(document.body.clientWidth-document.getElementById('login_div').offsetWidth)/2 +'px';
-            document.getElementById('login_div').style.top=(window.innerHeight-document.getElementById('login_div').offsetHeight)/2+document.body.scrollTop +'px';
-            document.getElementById('login_input').focus();
-        }
-<!--LoginEnd-->
+
     </script>
 </body>
 
