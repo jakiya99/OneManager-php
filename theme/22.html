@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="<!--constStr@language-->">
   <head>
     <link rel="icon" type="image/png" href="https://image.flaticon.com/icons/png/512/3244/3244858.png"/>
     <link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.1/css/mdui.css">
@@ -556,6 +556,8 @@ window.player = player;
       
       <!--MdRequireStart--><link rel="stylesheet" href="//unpkg.zhimg.com/github-markdown-css@3.0.1/github-markdown.css">
 <script type="text/javascript" src="//unpkg.zhimg.com/marked@0.6.2/marked.min.js"></script><!--MdRequireEnd-->
+	    
+	    
     <script>
     $ = mdui.JQ;
     $.fn.extend({
@@ -592,27 +594,8 @@ window.player = player;
          a.click() // 模拟点击
          a.remove();
     }
-<!--ShowThumbnailsStart-->
-    function thumb(){
-        if($('.mdui-fab i').text() == "apps"){
-            $('.mdui-fab i').text("format_list_bulleted");
-            $('.nexmoe-item').removeClass('thumb');
-            $('.nexmoe-item .mdui-icon').show();
-            $('.nexmoe-item .mdui-list-item').css("background","");
-        }else{
-            $('.mdui-fab i').text("apps");
-            $('.nexmoe-item').addClass('thumb');
-            $('.mdui-col-xs-12 i.mdui-icon').each(function(){
-                if($(this).text() == "image"){
-                    var thumbnails = $(this).parent().parent().attr('href');
-                    thumbnails = thumbnails.substr(0, thumbnails.length-8)+'?thumbnails&location';
-                    $(this).hide();
-                    $(this).parent().parent().parent().css("background","url("+thumbnails+")  no-repeat center top");
-                }
-            });
-        }
-    }	
-<!--ShowThumbnailsEnd-->
+	   
+	    
     $(function(){
         $('.file a').each(function(){
             $(this).on('click', function () {
