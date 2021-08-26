@@ -162,25 +162,73 @@ window.player = player;
                             <div class="main-items-size"><!--constStr@Size--></div>
                         </div>
                     </div>
-<!--FolderListStart-->
-                    <div class="main-items">
-<!--AdminStart-->
-                        <div class="main-items-radio-box">
-                            <input class="main-items-radio" type="radio" checked name="file" id="">
-                        </div>
-<!--AdminEnd-->
-                        <div class="main-items-icon">
-                            <img src="https://spoprod-a.akamaihd.net/files/fabric/assets/item-types-fluent/20/folder.svg" alt="folder icon">
-                        </div>
-                        <div class="main-items-fileName">
-                            <a href="<!--FileEncodeReplaceUrl-->/"><!--FileEncodeReplaceName--></a>
-                        </div>
-                        <div class="main-items-dateTime" ><!--lastModifiedDateTime--></div>
-                        <div class="main-items-fileSize" ><!--size--></div>
-                    </div>
+ <!--FolderListStart-->
+<li
+  class="mdui-list-item mdui-ripple"
+  data-sort
+  data-sort-name="<!--FileEncodeReplaceName-->"
+  data-sort-date="<!--lastModifiedDateTime-->"
+  data-sort-size="<!--size-->"
+  style="padding-right: 36px"
+>
+  <div class="mdui-row mdui-col-sm-12">
+    <a href="<!--FileEncodeReplaceUrl-->/">
+      <div class="mdui-col-xs-12 mdui-col-sm-7 mdui-text-truncate">
+        <i class="mdui-icon material-icons">folder_open</i
+        ><span> <!--FileEncodeReplaceName--></span>
+      </div>
+      <div class="mdui-col-sm-3 mdui-text-right">
+        <!--lastModifiedDateTime-->
+      </div>
+      <div class="mdui-col-sm-2 mdui-text-right">
+        <!--size-->
+      </div>
+    </a>
+  </div>
+</li>
 <!--FolderListEnd-->
-<!--FileListStart-->
-                    <div class="main-items">
+ <!--FileListStart-->
+<li
+  class="mdui-list-item file mdui-ripple"
+  data-sort
+  data-sort-name="<!--FileEncodeReplaceName-->"
+  data-sort-date="<!--lastModifiedDateTime-->"
+  data-sort-size="<!--size-->"
+  data-readypreview="<!--FileExt-->"
+>
+  <div class="mdui-row mdui-col-sm-12">
+    <div class="mdui-col-xs-12 mdui-col-sm-7 mdui-text-truncate">
+      <a
+        class="<!--FileExtType-->"
+        data-name="<!--FileEncodeReplaceName-->"
+        href="<!--FileEncodeReplaceUrl-->?preview"
+        aria-label="File"
+      >
+        <i class="mdui-icon material-icons"> <!--IconValue--></i>
+        <span> <!--FileEncodeReplaceName--></span>
+      </a>
+    </div>
+    <div class="mdui-col-sm-3 mdui-text-right">
+      <!--lastModifiedDateTime-->
+    </div>
+    <div class="mdui-col-sm-2 mdui-text-right">
+      <!--size-->
+    </div>
+  </div>
+  <div class="forcedownload mdui-text-right">
+    <a
+      title="<!--constStr@Download-->"
+      aria-label="Download"
+      href="<!--FileEncodeReplaceUrl-->"
+      target="_blank"
+      ><button class="mdui-btn mdui-ripple mdui-btn-icon">
+        <i class="mdui-icon material-icons">cloud_download</i>
+      </button></a
+    >
+  </div>
+</li>
+<!--FileListEnd-->
+
 <!--AdminStart-->
                         <div class="main-items-radio-box">
                             <input class="main-items-radio" type="radio" checked name="file" id="">
