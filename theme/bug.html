@@ -514,11 +514,17 @@ window.player = player;
 	
 	
   <!--IsvideoFileStart-->
-<a href="<!--FileDownUrl-->" target="_blank"></a> 	
+	
 <link class="dplayer-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js"></script>
 <div class="nexmoe-item">
-	<p>❗️If video doesn't play😐 refresh the tab 🔄</p>
+	
+	
+	
+	<a href="#" onclick="open_in_new_window('html_contents', 'MyTitle', 'location=1,status=1,toolbar=1,scrollbars=1,resizeable=1,width=500,height=250');">Open New Window</a>
+<div id="html_contents" data-new-window> <!-- data-new-window is important -->
+	
+
     <div class="mdui-center" id="dplayer"></div>
 </div>
 <script>
@@ -531,13 +537,33 @@ window.player = player;
         }
 	    
     });
-	$.pjax.reload({ container: '#dplayer' });
+
 </script>
 	
 	
 
 	
-	
+<script>
+
+function open_in_new_window(id, new_page_title, features) {
+    var new_window;
+
+    if(features !== undefined && features !== '') {
+    new_window = window.open('', '_blank', features);
+    }
+    else {
+        new_window = window.open('', '_blank');
+    }
+
+    var html_contents = document.getElementById(id);
+    if(html_contents !== null) {
+        new_window.document.write('<!doctype html><html><head><title>' + new_page_title + '</title><meta charset="UTF-8" /></head><body>' + html_contents.innerHTML + '</body></html>');
+    }
+}
+
+
+
+</script>	
 	
 	
 	
