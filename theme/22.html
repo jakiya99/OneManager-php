@@ -1,1 +1,671 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <link rel="icon" type="image/png" href="https://image.flaticon.com/icons/png/512/3244/3244858.png"/>
+    <link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.1/css/mdui.css">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<meta charset="utf-8" />
+<link
+  rel="shortcut icon"
+  href="<!--base_path-->favicon.ico"
+  type="image/x-icon"
+/>
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"
+/>
+<title><!--Title--></title>
+<meta name="description" content=" E-Learning index by Mizsuki" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/186526/renexmoe-cdn@v1.3/css/app.css"><meta name="theme-color" content="#fff" />
+<!--BackgroundStart-->
+<style>
+  body {
+    --bg: url("<!--BackgroundUrl-->");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: var(--bg);
+  }
+
+  .mdui-shadow-3 {
+    background: rgba(255, 255, 255, 0.5);
+  }
+</style>
+<script>
+  window.disableddarkmode = false;
+</script>
+
+<script>
+const player = new Plyr('video', {captions: {active: true}});
+</script>
+<script>
+window.player = player;
+</script>
+<!--BackgroundEnd-->
+<!--BackgroundMStart-->
+
+    
+    <style>
+  body {
+    --bg: url("<!--BackgroundMUrl-->");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: var(--bg);
+  }
+
+  .mdui-shadow-3 {
+    background: rgba(255, 255, 255, 0.5);
+  }
+</style>
+    
+<script>
+  window.disableddarkmode = false;
+</script>
+<!--BackgroundMEnd-->
+
+  </head>
+  <body
+    class="mdui-appbar-with-toolbar mdui-theme-layout-auto mdui-loaded mdui-theme-accent-pink"
+  >
+    <header
+  class="mdui-appbar mdui-appbar-fixed mdui-shadow-0 mdui-appbar-scroll-toolbar-hide"
+>
+  <div class="mdui-toolbar">
+  <span
+    class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white"
+    onclick='mdui.$("body").toggleClass("mdui-drawer-body-left");'
+    id="toggle-drawer"
+    ><i class="mdui-icon material-icons">menu</i></span
+  >
+  <a
+    class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white mdui-hidden-sm-up"
+    onclick="window.history.back()"
+  >
+    <i class="mdui-icon material-icons">arrow_back</i>
+  </a>
+  <a href="<!--base_path-->" class="mdui-typo-headline">
+    <!--Sitename-->
+  </a>
+  <!--PathArrayStart-->
+  <i class="mdui-icon material-icons mdui-hidden-xs" style="margin: 0"
+    >chevron_right</i
+  ><a href="<!--PathArrayLink-->" class="mdui-typo-subheading mdui-hidden-xs">
+    <!--PathArrayName--></a
+  >
+  <!--PathArrayEnd-->
+  <div class="mdui-toolbar-spacer"></div>
+  <!--AdminStart--><a
+    href="javascript:;"
+    class="mdui-btn mdui-btn-icon mdui-ripple mdui-hidden-sm-up refresh"
+    ><i class="mdui-icon material-icons">refresh</i></a
+  >
+  <!--AdminEnd-->
+</div>
+
+</header>
+
+    <div class="mdui-drawer mdui-drawer-close" id="main-drawer">
+  <div class="mdui-list" mdui-collapse="{accordion: true}">
+    <!--LoginStart-->
+<li
+  class="mdui-list-item mdui-ripple"
+  href="javascript:void(0);"
+  mdui-dialog="{target: '#login_input'}"
+>
+  <a class="mdui-list-item-icon mdui-icon material-icons">account_circle</a
+  ><a class="mdui-list-item-content">Master⭐️</a>
+</li>
+<!--LoginEnd-->
+<!--AdminStart-->
+<li class="mdui-list-item mdui-ripple" href="?setup">
+  <a class="mdui-list-item-icon mdui-icon material-icons" href="?setup"
+    >account_circle</a
+  ><a class="mdui-list-item-content" href="?setup">MIZSUミズキf</a>
+</li>
+<li
+  class="mdui-list-item mdui-ripple"
+  onclick="document.cookie=``;window.location.reload();"
+  id="logout"
+>
+  <i class="mdui-icon material-icons mdui-list-item-icon">exit_to_app</i>
+  <div class="mdui-list-item-content">Logout</div>
+</li>
+<li class="mdui-list-item mdui-ripple" id="checkupdate">
+  <i class="mdui-icon material-icons mdui-list-item-icon">update</i>
+  <div class="mdui-list-item-content">Update</div>
+</li>
+<div class="mdui-divider"></div>
+<!--AdminEnd-->
+
+    <li
+      class="mdui-list-item mdui-ripple"
+      href="javascript:void(0);"
+      onclick="renexmoe.toggle_theme();"
+    >
+      <a class="mdui-list-item-icon mdui-icon material-icons">brightness_4</a
+      ><a class="mdui-list-item-content">DARK MODE ON/OFF</a>
+    </li>
+    <li class="mdui-list-item mdui-ripple">
+      <a
+        href="<!--base_path-->"
+        class="mdui-list-item-icon mdui-icon material-icons"
+        >home</a
+      ><a href="<!--base_path-->" class="mdui-list-item-content" id="home">
+        <!--constStr@Home--></a
+      >
+    </li>
+    <!--MultiDiskAreaStart-->
+<div class="mdui-divider"></div>
+<!--MultiDisksStart-->
+<li class="mdui-list-item mdui-ripple">
+  <a
+    href="<!--MultiDisksUrl-->"
+    class="mdui-list-item-icon mdui-icon material-icons"
+    >cloud</a
+  >
+  <a
+    href="<!--MultiDisksUrl-->"
+    class="mdui-list-item-content mdui-text-truncate disk_name"
+  >
+    <!--MultiDisksName-->
+  </a>
+</li>
+<!--MultiDisksEnd-->
+<div class="mdui-divider"></div>
+<!--MultiDiskAreaEnd-->
+
+ 
+        <li
+      class="mdui-list-item mdui-ripple"
+      href="javascript:void(0);"
+      id="about_theme"
+    >
+      <i class="mdui-list-item-icon mdui-icon material-icons">touch_app</i>
+      <div class="mdui-list-item-content">Help❗️❓</div>
+    </li>
+  </div>
+      
+   
+      
+    <a
+      href="http://han.ocbs.cf"
+      class="mdui-list-item mdui-ripple"
+      ><i class="mdui-list-item-icon mdui-icon material-icons">web</i>
+      <div class="mdui-list-item-content">Gdrive Site⚜️</div>
+    </a>
+    
+    
+<a
+      href="https://t.me/Mizsuki"
+      class="mdui-list-item mdui-ripple"
+      ><i class="mdui-list-item-icon mdui-icon material-icons">chat</i>
+      <div class="mdui-list-item-content">Contact Admin 💫</div>
+    </a>
+	    
+        <li
+      class="mdui-list-item mdui-ripple"
+      href="javascript:void(0);"
+      id="about_theme"
+    >
+      <i class="mdui-list-item-icon mdui-icon material-icons">tag_faces</i>
+      <div class="mdui-list-item-content">Work&Learn Packs✅</div>
+    </li>
+  </div>
+    
+    
+    
+  </div>
+</div>
+
+   
+    
+    
+    <div class="mdui-container">
+  <ul class="mdui-menu" id="admin-menu">
+  <li class="mdui-menu-item">
+    <a href="javascript:;" class="mdui-ripple back"
+      ><i class="mdui-menu-item-icon mdui-icon material-icons">arrow_back</i
+      >Back</a
+    >
+  </li>
+  <!--AdminStart-->
+  <li class="mdui-menu-item">
+    <a href="javascript:;" class="mdui-ripple refresh"
+      ><i class="mdui-menu-item-icon mdui-icon material-icons">refresh</i
+      >Copy</a
+    >
+  </li>
+  <!--AdminEnd-->
+</ul>
+<i id="mouseplace" style="position: absolute"></i>
+
+<div class="mdui-dialog" id="login_input">
+  <div class="mdui-dialog-title">Admin Login ✨ </div>
+  <div class="mdui-dialog-content" style="height: 108px">
+    <div class="mdui-textfield mdui-textfield-floating-label">
+      <i class="mdui-icon material-icons">lock</i
+      ><label class="mdui-textfield-label">Login as Mizsuki </label
+      ><input
+        class="mdui-textfield-input"
+        name="password1"
+        type="password"
+        onkeydown="if(event.keyCode==13) document.querySelector('#login_btn').click();"
+      />
+    </div>
+  </div>
+  <div class="mdui-dialog-actions">
+    <button class="mdui-btn mdui-ripple" mdui-dialog-close="" id="login_close">cancel</button
+    ><button
+      id="login_btn"
+      class="mdui-btn mdui-ripple"
+      type="submit"
+      value="Pw登录"
+    >
+     Login
+    </button>
+  </div>
+</div>
+ <!--EncryptedStart-->
+<div class="mdui-col-md-6 mdui-col-offset-md-3">
+  <br />
+  <center>
+    <div class="mdui-typo-title">
+      这是一个受保护的文件夹，您需要提供访问密码才能查看。
+    </div>
+  </center>
+  <form action="" method="post">
+    <div class="mdui-textfield mdui-textfield-floating-label">
+      <i class="mdui-icon material-icons">https</i
+      ><label class="mdui-textfield-label"> <!--constStr@InputPassword--></label
+      ><input name="password1" class="mdui-textfield-input" type="password" />
+    </div>
+    <br /><button
+      type="submit"
+      class="mdui-center mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme"
+    >
+      <i class="mdui-icon material-icons">fingerprint</i>
+      <!--constStr@Submit-->
+    </button>
+  </form>
+</div>
+<!--EncryptedEnd-->
+
+  <!--IsFolderStart-->
+<!--HeadomfStart-->
+<div class="mdui-typo mdui-shadow-3" style="padding: 20px; margin: 20px 0">
+  <!--HeadomfContent-->
+</div>
+<!--HeadomfEnd-->
+<!--HeadmdStart-->
+<div class="mdui-chip mdui-ripple mdui-hidden-xs">
+  <span class="mdui-chip-icon"
+    ><i class="mdui-icon material-icons">face</i></span
+  ><span class="mdui-chip-title">HEAD.md</span>
+</div>
+<div
+  class="mdui-typo mdui-shadow-3 markdown"
+  style="padding: 20px; margin: 20px 0; overflow-x: scroll"
+  id="head"
+>
+  <pre><code id="head-md"><!--HeadmdContent--></code></pre>
+</div>
+<!--HeadmdEnd-->
+
+<div class="mdui-row mdui-shadow-3" style="margin: 20px 0; border-radius: 8px">
+  <ul class="mdui-list" id="file-list">
+    <li class="mdui-list-item mdui-ripple">
+      <div class="mdui-row mdui-col-xs-12">
+        <div class="mdui-col-xs-12 mdui-col-sm-7">
+          <!--constStr@File--><i
+            class="mdui-icon material-icons icon-sort"
+            data-sort="name"
+            data-order="downward"
+            >expand_more</i
+          >
+        </div>
+        <div class="mdui-col-sm-3 mdui-text-right">
+          <!--constStr@EditTime--><i
+            class="mdui-icon material-icons icon-sort"
+            data-sort="date"
+            data-order="downward"
+            >expand_more</i
+          >
+        </div>
+        <div class="mdui-col-sm-2 mdui-text-right">
+          <!--constStr@Size--><i
+            class="mdui-icon material-icons icon-sort"
+            data-sort="size"
+            data-order="downward"
+            >expand_more</i
+          >
+        </div>
+      </div>
+    </li>
+    <!--BackArrowStart-->
+    <li class="mdui-list-item mdui-ripple back-page">
+      <div class="mdui-row mdui-col-sm-12">
+        <a href="<!--BackArrowUrl-->">
+          <div class="mdui-col-xs-7">
+            <i class="mdui-icon material-icons">arrow_upward</i>
+          </div>
+          <div class="mdui-col-xs-3 mdui-text-right"></div>
+          <div class="mdui-col-xs-2 mdui-text-right"></div>
+        </a>
+      </div>
+    </li>
+    <!--BackArrowEnd-->
+    <!--FolderListStart-->
+<li
+  class="mdui-list-item mdui-ripple"
+  data-sort
+  data-sort-name="<!--FileEncodeReplaceName-->"
+  data-sort-date="<!--lastModifiedDateTime-->"
+  data-sort-size="<!--size-->"
+  style="padding-right: 36px"
+>
+  <div class="mdui-row mdui-col-sm-12">
+    <a href="<!--FileEncodeReplaceUrl-->/">
+      <div class="mdui-col-xs-12 mdui-col-sm-7 mdui-text-truncate">
+        <i class="mdui-icon material-icons">folder_open</i
+        ><span> <!--FileEncodeReplaceName--></span>
+      </div>
+      <div class="mdui-col-sm-3 mdui-text-right">
+        <!--lastModifiedDateTime-->
+      </div>
+      <div class="mdui-col-sm-2 mdui-text-right">
+        <!--size-->
+      </div>
+    </a>
+  </div>
+</li>
+<!--FolderListEnd-->
+ <!--FileListStart-->
+<li
+  class="mdui-list-item file mdui-ripple"
+  data-sort
+  data-sort-name="<!--FileEncodeReplaceName-->"
+  data-sort-date="<!--lastModifiedDateTime-->"
+  data-sort-size="<!--size-->"
+  data-readypreview="<!--FileExt-->"
+>
+  <div class="mdui-row mdui-col-sm-12">
+    <div class="mdui-col-xs-12 mdui-col-sm-7 mdui-text-truncate">
+      <a
+        class="<!--FileExtType-->"
+        data-name="<!--FileEncodeReplaceName-->"
+        href="<!--FileEncodeReplaceUrl-->?preview"
+        aria-label="File"
+      >
+        <i class="mdui-icon material-icons"> <!--IconValue--></i>
+        <span> <!--FileEncodeReplaceName--></span>
+      </a>
+    </div>
+    <div class="mdui-col-sm-3 mdui-text-right">
+      <!--lastModifiedDateTime-->
+    </div>
+    <div class="mdui-col-sm-2 mdui-text-right">
+      <!--size-->
+    </div>
+  </div>
+  <div class="forcedownload mdui-text-right">
+    <a
+      title="<!--constStr@Download-->"
+      aria-label="Download"
+      href="<!--FileEncodeReplaceUrl-->"
+      target="_blank"
+      ><button class="mdui-btn mdui-ripple mdui-btn-icon">
+        <i class="mdui-icon material-icons">cloud_download</i>
+      </button></a
+    >
+  </div>
+</li>
+<!--FileListEnd-->
+
+  </ul>
+</div>
+<!--ReadmemdStart-->
+<div class="mdui-chip mdui-ripple mdui-hidden-xs">
+  <span class="mdui-chip-icon"
+    ><i class="mdui-icon material-icons">face</i></span
+  ><span class="mdui-chip-title">README.md</span>
+</div>
+<div
+  class="mdui-typo mdui-shadow-3 markdown"
+  style="padding: 20px; margin: 20px 0; overflow-x: scroll"
+  id="readme"
+>
+  <pre><code id="readme-md"><!--ReadmemdContent--></code></pre>
+</div>
+<!--ReadmemdEnd-->
+<!--FootomfStart-->
+<div class="mdui-typo mdui-shadow-3" style="padding: 20px; margin: 20px 0">
+  <!--FootomfContent-->
+</div>
+<!--FootomfEnd-->
+
+<script>
+  document.querySelector("#admin-menu").innerHTML +=
+    '<li class="mdui-menu-item"><a href="javascript:void(0);"class="mdui-ripple getalllink"><i class="mdui-menu-item-icon mdui-icon material-icons">link</i>批量链接</a></li>';
+</script>
+<script>
+  window.MorePage = undefined;
+</script>
+<!--MorePageStart-->
+<script>
+    window.MorePage = [
+    <!--MorePageListNowStart-->
+      <!--PageNum-->,
+    <!--MorePageListNowEnd-->
+    <!--MorePageListStart-->
+        <!--PageNum-->,
+    <!--MorePageListEnd-->
+    ];
+  </script>
+<!--MorePageEnd-->
+
+<!--IsFolderEnd-->
+ <!--IsFileStart-->
+<div
+  id="file"
+  class="mdui-shadow-3"
+  style="padding: 5px; margin: 20px 0px; padding: 20px; border-radius: 8px"
+>
+  <!--IsimgFileStart-->
+<img class="mdui-img-fluid mdui-center mdui-m-t-5" src="<!--FileDownUrl-->" />
+<!--IsimgFileEnd-->
+ <!--IsmusicFileStart-->
+<audio
+  class="mdui-center"
+  src="<!--FileDownUrl-->"
+  controls
+  autoplay
+  style="width: 100%; margin-top: 10%; margin-bottom: 10%"
+></audio>
+<!--IsmusicFileEnd-->
+
+  <!--IsvideoFileStart-->
+<link class="dplayer-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js"></script>
+<div class="nexmoe-item">
+	<p>❗️If video doesn't play😐 refresh the tab 🔄</p>
+    <div class="mdui-center" id="dplayer"></div>
+</div>
+<script>
+    const dp = new DPlayer({
+        container: document.getElementById('dplayer'),
+        lang:'zh-en',
+        video: {
+            url: '<!--FileDownUrl-->',
+            type: 'auto'
+        }
+    });
+</script>
+<!--IsvideoFileEnd-->
+ <!--IsofficeFileStart-->
+<iframe
+  id="office-a"
+  src="https://view.officeapps.live.com/op/view.aspx?src=<!--FileEncodeDownUrl-->"
+  style="width: 100%; height: 800px"
+  frameborder="0"
+></iframe>
+<!--IsofficeFileEnd-->
+
+  <!--IspdfFileStart-->
+<embed src="<!--FileEncodeReplaceUrl-->" type="application/pdf" />
+<!--IspdfFileEnd-->
+ <!--IstxtFileStart-->
+<pre
+  id="editor"
+  style="
+    white-space: pre-wrap;
+    font-family: JetBrains Mono, Fira Code, Sarasa Mono SC, Cascadia Code, Menlo,
+      Consolas, monaco, Noto Sans SC;
+  "
+><code id="code"><!--TxtContent--></code></pre>
+<script>
+  document.querySelector("#admin-menu").innerHTML +=
+    '<li class="mdui-menu-item"><a href="javascript:void(0);"class="mdui-ripple highlight"><i class="mdui-menu-item-icon mdui-icon material-icons">style</i>markdown解析</a></li>';
+  document.querySelector(
+    ".mdui-toolbar"
+  ).innerHTML += `<a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-ripple mdui-hidden-sm-up highlight"><i class="mdui-icon material-icons">style</i></a>`;
+</script>
+
+<!--IstxtFileEnd-->
+
+  <!--IsOtherFileStart-->
+  <!--constStr@FileNotSupport-->
+  <!--IsOtherFileEnd-->
+</div>
+<a
+  href="<!--FileEncodeReplaceUrl-->"
+  target="_blank"
+  class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"
+  ><i class="mdui-icon material-icons">file_download</i></a
+>
+<script>
+  document.querySelector("#admin-menu").innerHTML +=
+    '<li class="mdui-menu-item"><a href="javascript:void(0);"class="mdui-ripple downloadurl"><i class="mdui-menu-item-icon mdui-icon material-icons">cloud_download</i>下载链接</a></li>';
+  document.querySelector(
+    ".mdui-toolbar"
+  ).innerHTML += `<a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-ripple mdui-hidden-sm-up downloadurl"><i class="mdui-icon material-icons">cloud_download</i></a>`;
+</script>
+<!--IsFileEnd-->
+      
+      
+      <!--MdRequireStart--><link rel="stylesheet" href="//unpkg.zhimg.com/github-markdown-css@3.0.1/github-markdown.css">
+<script type="text/javascript" src="//unpkg.zhimg.com/marked@0.6.2/marked.min.js"></script><!--MdRequireEnd-->
+    <script>
+<!--MorePageStart-->
+    function nextpage(num) {
+        document.getElementById('pagenum').value=num;
+        document.getElementById('nextpageform').submit();
+    }
+<!--MorePageEnd-->
+    $ = mdui.JQ;
+    $.fn.extend({
+        sortElements: function (comparator, getSortable) {
+            getSortable = getSortable || function () { return this; };
+            var placements = this.map(function () {
+                var sortElement = getSortable.call(this),
+                    parentNode = sortElement.parentNode,
+                    nextSibling = parentNode.insertBefore(
+                        document.createTextNode(''),
+                        sortElement.nextSibling
+                    );
+                return function () {
+                    parentNode.insertBefore(this, nextSibling);
+                    parentNode.removeChild(nextSibling);
+                };
+            });
+            return [].sort.call(this, comparator).each(function (i) {
+                placements[i].call(getSortable.call(this));
+            });
+        }
+    });
+
+    function downall() {
+         let dl_link_list = Array.from(document.querySelectorAll("li a"))
+             .map(x => x.href) // 所有list中的链接
+             .filter(x => x.slice(-1) != "/"); // 筛选出非文件夹的文件下载链接
+         let blob = new Blob([dl_link_list.join("\r\n")], {
+             type: 'text/plain'
+         }); // 构造Blog对象
+         let a = document.createElement('a'); // 伪造一个a对象
+         a.href = window.URL.createObjectURL(blob); // 构造href属性为Blob对象生成的链接
+         a.download = "folder_download_link.txt"; // 文件名称，你可以根据你的需要构造
+         a.click() // 模拟点击
+         a.remove();
+    }
+<!--ShowThumbnailsStart-->
+    function thumb(){
+        if($('.mdui-fab i').text() == "apps"){
+            $('.mdui-fab i').text("format_list_bulleted");
+            $('.nexmoe-item').removeClass('thumb');
+            $('.nexmoe-item .mdui-icon').show();
+            $('.nexmoe-item .mdui-list-item').css("background","");
+        }else{
+            $('.mdui-fab i').text("apps");
+            $('.nexmoe-item').addClass('thumb');
+            $('.mdui-col-xs-12 i.mdui-icon').each(function(){
+                if($(this).text() == "image"){
+                    var thumbnails = $(this).parent().parent().attr('href');
+                    thumbnails = thumbnails.substr(0, thumbnails.length-8)+'?thumbnails&location';
+                    $(this).hide();
+                    $(this).parent().parent().parent().css("background","url("+thumbnails+")  no-repeat center top");
+                }
+            });
+        }
+    }	
+<!--ShowThumbnailsEnd-->
+    $(function(){
+        $('.file a').each(function(){
+            $(this).on('click', function () {
+                var form = $('<form target=_blank method=post></form>').attr('action', $(this).attr('href')).get(0);
+                $(document.body).append(form);
+                form.submit();
+                $(form).remove();
+                return false;
+            });
+        });
+        $('.icon-sort').on('click', function () {
+            let sort_type = $(this).attr("data-sort"), sort_order = $(this).attr("data-order");
+            let sort_order_to = (sort_order === "less") ? "more" : "less";
+            $('li[data-sort]').sortElements(function (a, b) {
+                let data_a = $(a).attr("data-sort-" + sort_type), data_b = $(b).attr("data-sort-" + sort_type);
+                let rt = data_a.localeCompare(data_b, undefined, {numeric: true});
+                return (sort_order === "more") ? 0-rt : rt;
+            });
+            $(this).attr("data-order", sort_order_to).text("expand_" + sort_order_to);
+        });
+    });
+    document.querySelectorAll('.markdown').forEach(function (e) {
+        e.innerHTML = marked(e.innerHTML);
+    });
+    </script>
+
+</div>
+
+
+<a href="https://t.me/joinchat/VlEa41ifBRcQG7ya">
+    <img src='https://i.imgur.com/Tl61rVJ.jpg"
+' style='position:absolute; top:0; right:0;' width='200' height='70' alt='' />
+     
+       </a>
+    </body>
+  
+
+
+
+</body>
+  <!--IconValuesStart-->
+  { "music":"audiotrack", "video":"ondemand_video", "img":"image",
+  "pdf":"picture_as_pdf", "default":"insert_drive_file"}
+  <!--IconValuesEnd-->
+  <script src="https://cdn.jsdelivr.net/gh/186526/renexmoe-cdn@v1.3/js/app@1b381f3c.a4f2dc4618121eac37e2.js"></script><script src="https://cdn.jsdelivr.net/gh/186526/renexmoe-cdn@v1.3/js/app@28a13772.98a11cc0c1cf2495c3d8.js"></script><script src="https://cdn.jsdelivr.net/gh/186526/renexmoe-cdn@v1.3/js/app@34e3d95a.2f8dbf552095a86a7f1b.js"></script><script src="https://cdn.jsdelivr.net/gh/jakiya99/OneManager-php/rexx.js"></script><script src="https://cdn.jsdelivr.net/gh/186526/renexmoe-cdn@v1.3/js/app@9c50beac.30955a99f08c9574cd14.js"></script><script src="https://cdn.jsdelivr.net/gh/186526/renexmoe-cdn@v1.3/js/app@f0256996.956ea71aa357ba3fdc28.js"></script><script src="https://cdn.jsdelivr.net/gh/186526/renexmoe-cdn@v1.3/js/webpack-runtime.93708ab3e9cb84dcc01a.js"></script>
+</html>
+
+
 
