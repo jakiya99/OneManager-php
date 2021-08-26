@@ -486,23 +486,22 @@ window.player = player;
 ></audio>
 <!--IsmusicFileEnd-->
 
-  <!--IsvideoFileStart-->
-<link class="dplayer-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js"></script>
-<div class="nexmoe-item">
-	<p>❗️If video doesn't play😐 refresh the tab 🔄</p>
-    <div class="mdui-center" id="dplayer"></div>
-</div>
-<script>
-    const dp = new DPlayer({
-        container: document.getElementById('dplayer'),
-        lang:'zh-en',
-        video: {
-            url: '<!--FileDownUrl-->',
-            type: 'auto'
-        }
-    });
-</script>
+<!--IsvideoFileStart-->
+            <link class="dplayer-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css">
+            <script src="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js"></script>
+            <div class="nexmoe-item">
+                <div class="mdui-center" id="dplayer"></div>
+            </div>
+            <script>
+                const dp = new DPlayer({
+                    container: document.getElementById('dplayer'),
+                    lang:'zh-cn',
+                    video: {
+                        url: '<!--FileDownUrl-->',
+                        type: 'auto'
+                    }
+                });
+            </script>
 <!--IsvideoFileEnd-->
  <!--IsofficeFileStart-->
 <iframe
@@ -558,12 +557,6 @@ window.player = player;
       <!--MdRequireStart--><link rel="stylesheet" href="//unpkg.zhimg.com/github-markdown-css@3.0.1/github-markdown.css">
 <script type="text/javascript" src="//unpkg.zhimg.com/marked@0.6.2/marked.min.js"></script><!--MdRequireEnd-->
     <script>
-<!--MorePageStart-->
-    function nextpage(num) {
-        document.getElementById('pagenum').value=num;
-        document.getElementById('nextpageform').submit();
-    }
-<!--MorePageEnd-->
     $ = mdui.JQ;
     $.fn.extend({
         sortElements: function (comparator, getSortable) {
