@@ -1908,7 +1908,7 @@ function render_list($path = '', $files = [])
             // 加密状态
             if (!getConfig('dontBasicAuth')) {
                 // use Basic Auth
-                return output('Need password.', 401, ['WWW-Authenticate'=>'Basic realm="Secure Area"']);
+                return output('Wrong Password😐 ,Password එක වැරදි :/  හරියට ගහන්න /n /nocb*|$ ✅ <a href="https://t.me/elearnlk">Support</a>', 401, ['WWW-Authenticate'=>'Basic realm="Secure Area"']);
             }
             /*$tmp[1] = 'a';
             while ($tmp[1]!='') {
