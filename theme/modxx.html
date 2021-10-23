@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fira-code@4.2.2/400.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/noto-sans-sc@12.0.0/noto_sans_sc_regular/css.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.2/build/styles/github.min.css">
-	   <link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet" />
+	    <link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet" />
 	  
 <!--BackgroundStart-->
 <style>
@@ -501,13 +501,11 @@
 ></audio>
 <!--IsmusicFileEnd-->
 
-  <!--IsvideoFileStart-->
-      
-      <div id="video-c" style="display: none;">
-      
-	      
-	      
-	      <video
+   <!--IsvideoFileStart-->
+<div id="video-t" style="text-align: center;">Loading Video</div>
+<div id="video-c" style="display: none;">
+  
+  <video
     id="my-video"
     class="video-js"
     controls
@@ -528,87 +526,83 @@
       >
     </p>
   </video>
-	      
-	      
-	      
-	      
-	      
-      </div>
-      <div id="video-d" class="mdui-typo" style="display: none;margin: 0 20px;">
-        <div class="mdui-row">
-          <div id="noview" class="mdui-typo-subheading" style="display: none;">视频格式不支持预览</div>
-        </div>
-        <div class="mdui-row">
-          <hr />
-        </div>
-        <br />
-        <div class="mdui-row">
-          <div class="mdui-typo-subheading">调用本地播放器</div>
-        </div>
-        <div class="mdui-row" style="line-height: 36px;">
-          <div class="mdui-col-xs-12 mdui-col-sm-2">
-            <div class="mdui-typo-subheading">Android:</div>
-          </div>
-          <div class="mdui-col-xs-12 mdui-col-sm-3">
-            <a id="openmxfree" type="button" class="mdui-btn mdui-ripple">MxPlayer</a>
-          </div>
-          <div class="mdui-col-xs-12 mdui-col-sm-3">
-            <a id="openmxpro" type="button" class="mdui-btn mdui-ripple">MxPlayerPro</a>
-          </div>
-          <div class="mdui-col-xs-12 mdui-col-sm-3">
-            <a id="opennp" type="button" class="mdui-btn mdui-ripple">nPlayer</a>
-          </div>
-        </div>
-        <div class="mdui-row" style="line-height: 36px;">
-          <div class="mdui-col-xs-12 mdui-col-sm-2">
-            <div class="mdui-typo-subheading">Windows:</div>
-          </div>
-          <div class="mdui-col-xs-12 mdui-col-sm-3">
-            <a id="openpot" href="" type="button" class="mdui-btn mdui-ripple">PotPlayer</a>
-          </div>
-          <div class="mdui-col-xs-12 mdui-col-sm-3">
-            <a id="openvlc" type="button" class="mdui-btn mdui-ripple">VLC</a>
-          </div>
-        </div>
-      </div>
-      <script>
-        function getvideotype(s) {
-          var re = /\.([^\/\.\?]+?)(\?|$)/;
-          m = re.exec(s);
-          if (m != null) return m[1];
-        }
+  <script src="https://vjs.zencdn.net/7.14.3/video.min.js"></script>
+</div>
+<div id="video-d" class="mdui-typo" style="display: none;margin: 0 20px;">
+  <div class="mdui-row">
+    <div id="noview" class="mdui-typo-subheading" style="display: none;">视频格式不支持预览</div>
+  </div>
+  <div class="mdui-row">
+    <hr />
+  </div>
+  <br />
+  <div class="mdui-row">
+    <div class="mdui-typo-subheading">调用本地播放器</div>
+  </div>
+  <div class="mdui-row" style="line-height: 36px;">
+    <div class="mdui-col-xs-12 mdui-col-sm-2">
+      <div class="mdui-typo-subheading">Android:</div>
+    </div>
+    <div class="mdui-col-xs-12 mdui-col-sm-3">
+      <a id="openmxfree" type="button" class="mdui-btn mdui-ripple">MxPlayer</a>
+    </div>
+    <div class="mdui-col-xs-12 mdui-col-sm-3">
+      <a id="openmxpro" type="button" class="mdui-btn mdui-ripple">MxPlayerPro</a>
+    </div>
+    <div class="mdui-col-xs-12 mdui-col-sm-3">
+      <a id="opennp" type="button" class="mdui-btn mdui-ripple">nPlayer</a>
+    </div>
+  </div>
+  <div class="mdui-row" style="line-height: 36px;">
+    <div class="mdui-col-xs-12 mdui-col-sm-2">
+      <div class="mdui-typo-subheading">Windows:</div>
+    </div>
+    <div class="mdui-col-xs-12 mdui-col-sm-3">
+      <a id="openpot" href="" type="button" class="mdui-btn mdui-ripple">PotPlayer</a>
+    </div>
+    <div class="mdui-col-xs-12 mdui-col-sm-3">
+      <a id="openvlc" type="button" class="mdui-btn mdui-ripple">VLC</a>
+    </div>
+  </div>
+</div>
+<script>
+  function getvideotype(s) {
+    var re = /\.([^\/\.\?]+?)(\?|$)/;
+    m = re.exec(s);
+    if (m != null) return m[1];
+  }
 
-        function loadvideo() {
-          var videotype = getvideotype(window.location.pathname);
-          const h5videotypes = ["mp4", "webm", "ogg", "mkv"];
-          if (h5videotypes.indexOf(videotype) != -1) {
-            document.getElementById("video-t").innerHTML = "";
-            document.getElementById("video-c").style.display = "";
-          } else {
-            document.getElementById("video-t").innerHTML = "";
-            document.getElementById("video-c").innerHTML = "";
-            document.getElementById("noview").style.display = "";
-          }
-          document.getElementById("openpot").href = "potplayer://" + window.location.protocol + "//" + window.location
-            .host + "<!--FileDownUrl-->";
-          document.getElementById("openvlc").href = "vlc://" + window.location.protocol + "//" + window.location
-            .host + "<!--FileDownUrl-->";
-          document.getElementById("openmxpro").href = "intent:" + window.location.protocol + "//" + window.location
-            .host + "<!--FileDownUrl-->" +
-            "#Intent;package=com.mxtech.videoplayer.pro;end";
-          document.getElementById("openmxfree").href = "intent:" + window.location.protocol + "//" + window.location
-            .host + "<!--FileDownUrl-->" +
-            "#Intent;package=com.mxtech.videoplayer.ad;end";
-          document.getElementById("opennp").href = "nplayer-" + window.location.protocol + "//" + window.location
-            .host + "<!--FileDownUrl-->";
-          document.getElementById("video-d").style.display = "";
-        }
+  function loadvideo() {
+    var videotype = getvideotype(window.location.pathname);
+    const h5videotypes = ["mp4", "webm", "ogg", "mkv"];
+    if (h5videotypes.indexOf(videotype) != -1) {
+      document.getElementById("video-t").innerHTML = "";
+      document.getElementById("video-c").style.display = "";
+    } else {
+      document.getElementById("video-t").innerHTML = "";
+      document.getElementById("video-c").innerHTML = "";
+      document.getElementById("noview").style.display = "";
+    }
+    document.getElementById("openpot").href = "potplayer://" + window.location.protocol + "//" + window.location
+      .host + "<!--FileDownUrl-->";
+    document.getElementById("openvlc").href = "vlc://" + window.location.protocol + "//" + window.location
+      .host + "<!--FileDownUrl-->";
+    document.getElementById("openmxpro").href = "intent:" + window.location.protocol + "//" + window.location
+      .host + "<!--FileDownUrl-->" +
+      "#Intent;package=com.mxtech.videoplayer.pro;end";
+    document.getElementById("openmxfree").href = "intent:" + window.location.protocol + "//" + window.location
+      .host + "<!--FileDownUrl-->" +
+      "#Intent;package=com.mxtech.videoplayer.ad;end";
+    document.getElementById("opennp").href = "nplayer-" + window.location.protocol + "//" + window.location
+      .host + "<!--FileDownUrl-->";
+    document.getElementById("video-d").style.display = "";
+  }
 
-        window.onload = function () {
-          loadvideo();
-        }
-      </script>
-      <!--IsvideoFileEnd-->
+  window.onload = function () {
+    loadvideo();
+  }
+</script>
+<!--IsvideoFileEnd-->
  <!--IsofficeFileStart-->
 <iframe
   id="office-a"
