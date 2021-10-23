@@ -394,7 +394,7 @@
   </div>
   <br />
   <div class="mdui-row">
-    <div class="mdui-typo-subheading">调用本地播放器</div>
+    <div class="mdui-typo-subheading">offline players</div>
   </div>
   <div class="mdui-row" style="line-height: 36px;">
     <div class="mdui-col-xs-12 mdui-col-sm-2">
@@ -403,12 +403,7 @@
     <div class="mdui-col-xs-12 mdui-col-sm-3">
       <a id="openmxfree" type="button" class="mdui-btn mdui-ripple">MxPlayer</a>
     </div>
-    <div class="mdui-col-xs-12 mdui-col-sm-3">
-      <a id="openmxpro" type="button" class="mdui-btn mdui-ripple">MxPlayerPro</a>
-    </div>
-    <div class="mdui-col-xs-12 mdui-col-sm-3">
-      <a id="opennp" type="button" class="mdui-btn mdui-ripple">nPlayer</a>
-    </div>
+
   </div>
   <div class="mdui-row" style="line-height: 36px;">
     <div class="mdui-col-xs-12 mdui-col-sm-2">
@@ -417,9 +412,7 @@
     <div class="mdui-col-xs-12 mdui-col-sm-3">
       <a id="openpot" href="" type="button" class="mdui-btn mdui-ripple">PotPlayer</a>
     </div>
-    <div class="mdui-col-xs-12 mdui-col-sm-3">
-      <a id="openvlc" type="button" class="mdui-btn mdui-ripple">VLC</a>
-    </div>
+    
   </div>
 </div>
 <script>
@@ -442,16 +435,10 @@
     }
     document.getElementById("openpot").href = "potplayer://" + window.location.protocol + "//" + window.location
       .host + "<!--FileDownUrl-->";
-    document.getElementById("openvlc").href = "vlc://" + window.location.protocol + "//" + window.location
-      .host + "<!--FileDownUrl-->";
-    document.getElementById("openmxpro").href = "intent:" + window.location.protocol + "//" + window.location
-      .host + "<!--FileDownUrl-->" +
-      "#Intent;package=com.mxtech.videoplayer.pro;end";
+ 
     document.getElementById("openmxfree").href = "intent:" + window.location.protocol + "//" + window.location
       .host + "<!--FileDownUrl-->" +
       "#Intent;package=com.mxtech.videoplayer.ad;end";
-    document.getElementById("opennp").href = "nplayer-" + window.location.protocol + "//" + window.location
-      .host + "<!--FileDownUrl-->";
     document.getElementById("video-d").style.display = "";
   }
 
