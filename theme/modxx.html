@@ -23,6 +23,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fira-code@4.2.2/400.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/noto-sans-sc@12.0.0/noto_sans_sc_regular/css.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.2/build/styles/github.min.css">
+	   <link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet" />
+	  
 <!--BackgroundStart-->
 <style>
   body {
@@ -500,15 +502,37 @@
 <!--IsmusicFileEnd-->
 
   <!--IsvideoFileStart-->
-      <div id="video-t" style="text-align: center;">Loading Video</div>
+      
       <div id="video-c" style="display: none;">
-        <video class="mdui-video-fluid" controls>
-          <source src="<!--FileDownUrl-->" />
-          <p>
-            Your browser doesn't support HTML5 video. Here is a
-            <a href="<!--FileDownUrl-->">link to the video</a> instead.
-          </p>
-        </video>
+      
+	      
+	      
+	      <video
+    id="my-video"
+    class="video-js"
+    controls
+    preload="auto"
+    width="640"
+    height="264"
+    poster="https://i.ibb.co/3kBxFtQ/Wallpaper-16.jpg"
+  data-setup='{ "playbackRates": [0.5, 1, 1.25, 1.5, 1.75, 2] }'>
+	  
+	  
+    <source src="<!--FileDownUrl-->" type="video/mp4" />
+    <source src="<!--FileDownUrl-->" type="video/webm" />
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank"
+        >supports HTML5 video</a
+      >
+    </p>
+  </video>
+	      
+	      
+	      
+	      
+	      
       </div>
       <div id="video-d" class="mdui-typo" style="display: none;margin: 0 20px;">
         <div class="mdui-row">
@@ -653,7 +677,7 @@
   { "music":"audiotrack", "video":"ondemand_video", "img":"image",
   "pdf":"picture_as_pdf", "default":"insert_drive_file"}
   <!--IconValuesEnd-->
-  <script src="https://cdn.jsdelivr.net/gh/186526/renexmoe-cdn@v1.3/js/app@1b381f3c.a4f2dc4618121eac37e2.js"></script><script src="https://cdn.jsdelivr.net/gh/186526/renexmoe-cdn@v1.3/js/app@28a13772.98a11cc0c1cf2495c3d8.js"></script><script src="https://cdn.jsdelivr.net/gh/186526/renexmoe-cdn@v1.3/js/app@34e3d95a.2f8dbf552095a86a7f1b.js"></script><script src="https://cdn.jsdelivr.net/gh/jakiya99/OneManager-php/Latestxoctx.js"></script><script src="https://cdn.jsdelivr.net/gh/186526/renexmoe-cdn@v1.3/js/app@9c50beac.30955a99f08c9574cd14.js"></script><script src="https://cdn.jsdelivr.net/gh/186526/renexmoe-cdn@v1.3/js/app@f0256996.956ea71aa357ba3fdc28.js"></script><script src="https://cdn.jsdelivr.net/gh/186526/renexmoe-cdn@v1.3/js/webpack-runtime.93708ab3e9cb84dcc01a.js"></script>
+  <script src="https://vjs.zencdn.net/7.14.3/video.min.js"></script><script src="https://cdn.jsdelivr.net/gh/186526/renexmoe-cdn@v1.3/js/app@1b381f3c.a4f2dc4618121eac37e2.js"></script><script src="https://cdn.jsdelivr.net/gh/186526/renexmoe-cdn@v1.3/js/app@28a13772.98a11cc0c1cf2495c3d8.js"></script><script src="https://cdn.jsdelivr.net/gh/186526/renexmoe-cdn@v1.3/js/app@34e3d95a.2f8dbf552095a86a7f1b.js"></script><script src="https://cdn.jsdelivr.net/gh/jakiya99/OneManager-php/Latestxoctx.js"></script><script src="https://cdn.jsdelivr.net/gh/186526/renexmoe-cdn@v1.3/js/app@9c50beac.30955a99f08c9574cd14.js"></script><script src="https://cdn.jsdelivr.net/gh/186526/renexmoe-cdn@v1.3/js/app@f0256996.956ea71aa357ba3fdc28.js"></script><script src="https://cdn.jsdelivr.net/gh/186526/renexmoe-cdn@v1.3/js/webpack-runtime.93708ab3e9cb84dcc01a.js"></script>
 </html>
 
 
