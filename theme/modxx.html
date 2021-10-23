@@ -500,43 +500,17 @@
 <!--IsmusicFileEnd-->
 
   <!--IsvideoFileStart-->
-
-
-
-<head>
-  <link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet" />
-
-  <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
-  <!-- <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script> -->
-</head>
-
-<body>
-<video
-    id="my-video"
-    class="video-js"
-    controls
-    preload="auto"
-    width="640"
-    height="264"
-    poster="https://i.ibb.co/3kBxFtQ/Wallpaper-16.jpg"
-  data-setup='{ "playbackRates": [0.5, 1, 1.25, 1.5, 1.75, 2] }'>
-	  
-	  
-    <source src="<!--FileDownUrl-->" type="video/mp4" />
-    <source src="<!--FileDownUrl-->" type="video/webm" />
-    <p class="vjs-no-js">
-      To view this video please enable JavaScript, and consider upgrading to a
-      web browser that
-      <a href="https://videojs.com/html5-video-support/" target="_blank"
-        >supports HTML5 video</a
-      >
-    </p>
-  </video>
-
-  <script src="https://vjs.zencdn.net/7.14.3/video.min.js"></script>
-
-	
- <div id="my-video" class="mdui-typo" style="display: none;margin: 0 20px;">
+      <div id="video-t" style="text-align: center;">Loading Video</div>
+      <div id="video-c" style="display: none;">
+        <video class="mdui-video-fluid" controls>
+          <source src="<!--FileDownUrl-->" />
+          <p>
+            Your browser doesn't support HTML5 video. Here is a
+            <a href="<!--FileDownUrl-->">link to the video</a> instead.
+          </p>
+        </video>
+      </div>
+      <div id="video-d" class="mdui-typo" style="display: none;margin: 0 20px;">
         <div class="mdui-row">
           <div id="noview" class="mdui-typo-subheading" style="display: none;">视频格式不支持预览</div>
         </div>
@@ -610,15 +584,7 @@
           loadvideo();
         }
       </script>
-
-
-</body>
-
-
-
-
-
-<!--IsvideoFileEnd-->
+      <!--IsvideoFileEnd-->
  <!--IsofficeFileStart-->
 <iframe
   id="office-a"
